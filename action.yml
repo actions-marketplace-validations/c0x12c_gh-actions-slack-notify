@@ -9,8 +9,18 @@ branding:
 
 # Define your inputs here.
 inputs:
+  message:
+    description: 'Optional body text rendered beneath the title.'
+    required: false
+    default: ''
+  message_format:
+    description: >-
+      How to render `message`: "mrkdwn" (default) passes it through, "code" wraps it in a code block
+      and escapes any fence terminator in the body so it cannot close the block early.
+    required: false
+    default: 'mrkdwn'
   num-commits:
-    description: 'The number of recent commis included in the message'
+    description: 'The number of recent commits included in the message'
     required: false
     default: '3'
   project_url:
